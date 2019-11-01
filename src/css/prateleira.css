@@ -1,0 +1,75 @@
+.prateleira-titulo{
+    text-align: center;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.carousel-item{
+    height: 100%;
+}
+
+.carousel-item:hover,.prateleira:hover{
+    transform: scale(1.05);
+    opacity: 0.8;
+    transition: 0.5s ease-out;
+    box-shadow: 0 0 0.2em #5e5e5e;
+}
+
+.carousel-item-thumb{
+    margin-bottom: 0.5rem;
+}
+
+.carousel-item-conteudo{
+    margin-bottom: 0.5rem;
+    font-size:0.9rem;
+}
+
+.carousel-item-nome{
+    color:#000 !important;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+    font-size:1.2rem; 
+    height: 3rem;
+}
+
+.carousel-preco p{
+    margin: 0;
+    color: #5e5e5e;
+}
+
+.carousel-item-preco{
+    color:#d9a15d !important;
+}
+
+.carousel-item-preco-antigo{
+    margin-right: 1rem;
+    text-decoration: #9f9f9f;
+    text-decoration-line: line-through; 
+}
+
+.carousel-list ul{
+    padding: 0;
+}
+
+.carousel-products li{
+    list-style: none;
+}
+
+.underscore{
+    border-bottom: 2px solid #d9a15d !important;
+    width: 2rem;
+    margin: 0 auto;
+}
+
+.d-none{
+    display: none;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    width: 5%;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    border-radius:50%;
+    background-color: #a5a5a4;
+    padding: 0.75rem;
+}

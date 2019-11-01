@@ -1,0 +1,88 @@
+footer{
+    font-size: 0.8rem;
+    padding-top:1px ;
+    color:#969696;
+    border-top:4px solid #00bca3;
+    margin-top:1.5rem;
+}
+
+footer h3{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: antiquewhite;
+    letter-spacing: 2px;
+}
+
+footer a{
+    color: #969696;
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+footer ul{
+    padding: 0;
+}
+
+footer li{
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-email,#btn-assinar-newsletter{
+    border-radius:0 ;
+    border:1px solid #969696;
+}
+
+.newsletter-email,.newsletter-email:focus, #btn-assinar-newsletter:hover{
+    background-color: #404040;
+}
+
+.newsletter-email{
+    border: none;
+}
+
+.newsletter-email:focus{
+    color:antiquewhite;
+}
+
+.newsletter-email::placeholder{
+    color: #969696;
+}
+
+#btn-assinar-newsletter{
+    padding:0.5rem 2rem;
+    background-color: transparent;
+    color:antiquewhite;
+    text-transform: uppercase;
+    font-size:0.7rem;
+}
+
+.rodape{
+    background-color: #222222;
+    padding: 2rem 0 ;
+}
+
+.logo-rodape h3{
+    display: inline-block;
+    color:#969696;
+    font-family: 'Arimo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.logo-rodape .losango{
+    margin:0 5px;
+    width: 3px;
+    height: 3px;
+    background-color:#969696;
+    vertical-align: super;
+}
+
+.assinatura{
+    margin-top:2rem;
+}
+
+.selos li{
+    display: inline-block;
+}

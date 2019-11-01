@@ -1,0 +1,11 @@
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(../assets/sprites/icons.png);}
+
+.american-express {width:35px; height:25px; background-position: -67px -25px}
+.boleto {width:34px; height:25px; background-position: -33px -25px}
+.certisign {width:74px; height:50px; background-position: -34px -50px}
+.diners {width:34px; height:25px; background-position: -0px -50px}
+.elo {width:33px; height:25px; background-position: -0px -25px}
+.master {width:34px; height:25px; background-position: -25px -0px}
+.sacola {width:25px; height:25px; background-position: -0px -0px}
+.visa {width:35px; height:25px; background-position: -59px -0px}

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Loja da Vanessa</title>
+
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="src/css/main.css">
+
+    </head>
+    <body>
+
+        <header>
+            <nav class="row main-navbar">
+                <div class="col-12 col-md-6 offset-md-3">
+                    <ul class="d-flex justify-content-center">
+                        <li class="col-3 col-md-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-btn">
+                                        <button class="btn" id="btn-buscar">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                                <input class="search-box form-control" type="text" name="buscar" id="buscar" placeholder="buscar">  
+                            </div>
+                            <!-- <a href="#">
+                                <i class="fa fa-search"></i>buscar
+                            </a> -->
+                        </li>
+                        <li class="col-3 col-md-3"><a href="#">Minha Conta</a></li>
+                        <li class="col-3 col-md-3"><a href="#">Entrar</a></li>
+                        <li class="col-3 col-md-3">
+                            <a href="#">
+                                <i class="fa fa-shopping-bag"></i>
+                                Sacola <span id="bag-qtd">(0)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <section class="row logo">
+                <div class="col-12 col-md-12">
+                    <div class="losango"></div>
+                    <div class="losango losango-2x"></div>
+                    <h1>Loja da Vanessa</h1>
+                    <div class="losango losango-2x"></div>
+                    <div class="losango"></div>
+                </div>
+            </section>          
+        </header>
+
+        <main class="container">
+            <!-- Aviso de sacola -->
+            <div id="aviso" class="d-none">
+                <div id="aviso-container">
+                    <span id="aviso-content"></span>
+                    <i id="fechar-aviso" class="fa fa-check"></i>
+                </div>
+            </div>
+
+            <nav class="row historico-navbar">
+                <div class="col-12 col-md-12">
+                    <ol class="d-flex justify-content-start">
+                        <li><a href="#">Home</a></li>
+                        <li><span>></span><a href="#">Roupas</a></li>
+                        <li><span>></span><a href="#">Vestidos</a></li>
+                        <li class="pagina-atual"><span>></span><a href="#">Vestido Must-Have Sweatshirt</a></li>
+                    </ol>
+                </div>
+            </nav>
+            
+            <section class="row produto-secao">
+                <div class="col-12 col-md-6">
+                    <section class="row produto-vitrine">
+                        <div class="col-12 col-md-12">
+                            <div class="produto-zoom">
+                                <div id="overlay" class="overlay d-none"></div>
+                                <div class="produto-imagem">
+                                    <img id="foto-principal" src="src/assets/images/foto-01.jpg" alt="Vestido-Must-Have-Frontal">
+
+                                </div>
+                            </div>     
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <div class="thumb thumb-selecionada">
+                                <img src="src/assets/images/thumb-01.jpg" alt="Vestido-Must-Have-Frontal-thumb">
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <div class="thumb">
+                                <img src="src/assets/images/thumb-02.jpg" alt="Vestido-Must-Have-Costas-thumb">
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <div class="thumb">
+                                <img src="src/assets/images/thumb-03.jpg" alt="Vestido-Must-Have-Frontal-Aproximado-Thumb">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                    
+                <div class="col-12 col-md-6">
+                    <aside class="row produto-container">
+                        <div class="col-12 col-md-12">
+                            <div class="produto-cabecalho">
+                                <p><span id="produto-ref">Ref.: MO8992</span></p>
+                                <nav class="redes-sociais-navbar">
+                                    <ul class="d-flex justify-content-start">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></i></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    </ul> 
+                                </nav>
+                                <h1 class="produto-nome">Vestido Must Have Sweatshirt</h1>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-md-12">
+                            <div class="produto-preco">
+                                <p><span class="preco-antigo">R$ 22,80</span></p>
+                                <p><span class="preco-atual">R$ 15,00</span></p>
+                                <p><span class="preco-parcelas">3x de R$ 5,00 s/juros</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-md-12">
+                            <div class="produto-tamanho">
+                                <p>Tamanho</p>
+                                <select class="col-4 col-md-4 custom-select" id="tamanho">
+                                    <option selected>Tam. 17</option>
+                                    <option value="18">Tam. 18</option>
+                                    <option value="19">Tam. 19</option>
+                                    <option value="20">Tam. 20</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-md-12">
+                            <div class="d-flex align-items-baseline produto-checkout">
+                                <button id="adicionar-sacola" class="col-6 col-md-6 btn">Adicionar à sacola</button>
+                                <div class="col-6 col-md-6 offset-1 offset-md-1">
+                                    <div class="lista-desejo">
+                                        <i class="fa fa-heart-o"></i>
+                                        <p>Lista de Desejos</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        
+                        <div class="col-12 col-md-12">
+                            <div class="produto-descricao">
+                                <p>A french terry sweatshirt dress featuring iong raglan sleeves. Round neckline.   Banded trim. Knit. Lightweight</p>
+                                <ul>
+                                    <li>34" approx. length from gigh point shoulder to hem, 38" chest, 36" waist, 30" sleeve length from high point shoulder</li>
+                                    <li>Measured from Small</li>
+                                    <li>61% cotton, 39% viscose</li>
+                                    <li>Hand wash cold, dry flat</li>
+                                    <li>Imported</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-md-12">
+                            <div class="produto-frete">
+                                <div class="busca-frete">
+                                    <p>Frete e Prazo</p>
+                                    <input type="text" class="col-4 col-md-4 form-control busca-cep" aria-label="Default" id="cep" name="cep" maxlength="9" required placeholder="22271-100" > 
+                                    <a href="#" id="calcular-frete">Calcular</a>
+                                </div>   
+        
+                                <div class="frete-preco">
+                                    <p>PAC: <span id="pac-preco">R$18,30</span> - <span id="pac-prazo"> 7 </span> dias úteis</p>
+                                    <p>SEDEX: <span id="sedex-preco">R$26,00</span> - <span id="sedex-prazo"> 4 </span> dias úteis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+            
+            <section class="row prateleira">
+                <div class="col-12 col-md-12">
+                    <div class="col-md-4 offset-md-4 prateleira-titulo">
+                        <h4 class="prateleira-titulo">Aproveite também</h4>
+                        <div class="underscore"></div>
+                    </div>
+
+                    <div id="prateleira-carousel" class="carousel" data-ride="carousel">
+                            <ul class="d-flex carousel-products" class="carousel-inner" style="padding: 2rem 0;">
+
+                                <li class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="carousel-item active">
+                                        <div class="carousel-item-thumb">
+                                            <a href="#">
+                                                <img class="" src="src/assets/images/prateleira-01.jpg" alt="First slide">
+                                            </a>
+                                        </div>
+                                        <div class="carousel-item-conteudo">
+                                            <h4 class="carousel-item-nome">Saia Global Girl Bodycon</h4>
+                                            <div class="carousel-preco">
+                                                <p><span class="carousel-item-preco">R$ 30,00</span></p>
+                                                <p><span class="carousel-item-parcelas">3x de R$ 5,00 s/juros</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                    
+                                <li class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="carousel-item active">
+                                        <div class="carousel-item-thumb">
+                                            <a href="#">
+                                                <img class="" src="src/assets/images/prateleira-02.jpg" alt="Second slide">
+                                            </a>
+                                        </div>
+                                        <div class="carousel-item-conteudo">
+                                            <h4 class="carousel-item-nome">Vestido Must-Have Sweatshirt</h4>
+                                            <div class="carousel-preco">
+                                                <p><span class="carousel-item-preco">R$ 15,00</span></p>
+                                                <p><span class="carousel-item-parcelas">3x de R$ 5,00 s/juros</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                    
+                                <li class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="carousel-item active">
+                                        <div class="carousel-item-thumb">
+                                            <a href="#">
+                                                <img class="" src="src/assets/images/prateleira-03.jpg" alt="Third slide">
+                                            </a>
+                                        </div>
+                                        <div class="carousel-item-conteudo">
+                                            <h4 class="carousel-item-nome">Mini Saia Day Dreamer Abstract</h4>
+                                            <div class="carousel-preco">
+                                                <p><span class="carousel-item-preco">R$ 15,00</span></p>
+                                                <p><span class="carousel-item-parcelas">3x de R$ 5,00 s/juros</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                    
+                                <li class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="carousel-item active">
+                                        <div class="carousel-item-thumb">
+                                            <a href="#">
+                                                <img class="" src="src/assets/images/prateleira-04.jpg" alt="Fourth slide">
+                                            </a>
+                                        </div>
+                                        <div class="carousel-item-conteudo">
+                                            <h4 class="carousel-item-nome">Vestido Opulent A-Line</h4>
+                                            <div class="carousel-preco">
+                                                <p><span class="carousel-item-preco-antigo">R$ 45,80</span><span class="carousel-item-preco">R$ 30,00</span></p>
+                                                <p><span class="carousel-item-parcelas">3x de R$ 5,00 s/juros</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="carousel-item ">
+                                        <div class="carousel-item-thumb">
+                                            <a href="#">
+                                                <img class="" src="src/assets/images/prateleira-01.jpg" alt="First slide">
+                                            </a>
+                                        </div>
+                                        <div class="carousel-item-conteudo">
+                                            <h4 class="carousel-item-nome">Saia Global Girl Bodycon</h4>
+                                            <div class="carousel-preco">
+                                                <p><span class="carousel-item-preco">R$ 30,00</span></p>
+                                                <p><span class="carousel-item-parcelas">3x de R$ 5,00 s/juros</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                    
+                                <li class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="carousel-item ">
+                                        <div class="carousel-item-thumb">
+                                            <a href="#">
+                                                <img class="" src="src/assets/images/prateleira-02.jpg" alt="Second slide">
+                                            </a>
+                                        </div>
+                                        <div class="carousel-item-conteudo">
+                                            <h4 class="carousel-item-nome">Vestido Must-Have Sweatshirt</h4>
+                                            <div class="carousel-preco">
+                                                <p><span class="carousel-item-preco">R$ 15,00</span></p>
+                                                <p><span class="carousel-item-parcelas">3x de R$ 5,00 s/juros</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                    
+                                <li class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="carousel-item ">
+                                        <div class="carousel-item-thumb">
+                                            <a href="#">
+                                                <img class="" src="src/assets/images/prateleira-03.jpg" alt="Third slide">
+                                            </a>
+                                        </div>
+                                        <div class="carousel-item-conteudo">
+                                            <h4 class="carousel-item-nome">Mini Saia Day Dreamer Abstract</h4>
+                                            <div class="carousel-preco">
+                                                <p><span class="carousel-item-preco">R$ 15,00</span></p>
+                                                <p><span class="carousel-item-parcelas">3x de R$ 5,00 s/juros</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                    
+                                <li class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="carousel-item ">
+                                        <div class="carousel-item-thumb">
+                                            <a href="#">
+                                                <img class="" src="src/assets/images/prateleira-04.jpg" alt="Fourth slide">
+                                            </a>
+                                        </div>
+                                        <div class="carousel-item-conteudo">
+                                            <h4 class="carousel-item-nome">Vestido Opulent A-Line</h4>
+                                            <div class="carousel-preco">
+                                                <p><span class="carousel-item-preco-antigo">R$ 45,80</span><span class="carousel-item-preco">R$ 30,00</span></p>
+                                                <p><span class="carousel-item-parcelas">3x de R$ 5,00 s/juros</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" >
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                    </div>
+                </div>
+            </section>         
+        
+        </main>
+
+        <footer>
+            <div class="rodape">
+                <div class="container">
+                    <section class="row institucional-informacao">
+                        <div class="col-6 col-md-3">
+                            <div class="institucional">
+                                <h3>Institucional</h3>
+                                <ul>
+                                    <li><a href="#">Quem Somos</a></li>
+                                    <li><a href="#">Contato</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-6 col-md-3">
+                            <div class="ajuda-suporte">
+                                <h3>Ajuda & Suporte</h3>
+                                <ul>
+                                    <li><a href="#">Como Comprar</a></li>
+                                    <li><a href="#">Termos e Condições</a></li>
+                                    <li><a href="#">Procon RJ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-6 col-md-3">
+                            <div class="newsletter">
+                                <h3>Newsletter</h3>
+                                <form>
+                                    <fieldset class="form-group">
+                                        <input type="email" class="form-control newsletter-email" id="email" aria-describedby="emailHelp" placeholder="Seu email">
+                                    </fieldset>
+                                    <fieldset>
+                                        <button id="btn-assinar-newsletter" class="btn">Assinar</button>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <div class="col-6 col-md-3">
+                            <div class="redes-sociais">
+                                <h3>Redes Sociais</h3>
+                                <ul>
+                                    <li><a href="#">Facebook</a></li>
+                                    <li><a href="#">Instagram</a></li>
+                                    <li><a href="#">Twitter</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+            
+                    <section class="row assinatura">
+                        <div class="col-md-12 logo-rodape">
+                            <div class="losango"></div>
+                            <div class="losango losango-2x"></div>
+                            <h3>Loja da Vanessa</h3>
+                            <div class="losango losango-2x"></div>
+                            <div class="losango"></div>
+                        </div>
+                        <section class="col-12 col-md-6 assinatura-info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra maximus nunc, in ornare magna imperdiet cursus. Sed eget vulputate ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                        </section>
+                
+                        <section class="col-12 col-md-6 selos">
+                            <ul>
+                                <li ><i class="sprite visa"></i> </li>
+                                <li ><i class="sprite master"></i></li>
+                                <li ><i class="sprite elo"></i></li>
+                                <li ><i class="sprite diners"></i></li>
+                                <li ><i class="sprite american-express"></i></li>
+                                <li ><i class="sprite boleto"></i></li>
+                                <li ><i class="sprite certisign"></i></li>
+                            </ul>
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </footer>
+        <script type="module" src="src/js/index.js"></script>
+    </body>
+</html>

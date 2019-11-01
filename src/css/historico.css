@@ -1,0 +1,30 @@
+.historico-navbar {
+    font-size: 0.8rem;
+}
+
+.historico-navbar ol{
+    padding-left: 0;
+}
+
+.historico-navbar li{
+    list-style: none;
+    margin-right: 1vw;
+}
+
+.historico-navbar a{
+    color: #333;  
+}
+
+.historico-navbar a:hover{
+    text-decoration: none; 
+}
+
+.historico-navbar span{
+    color: #d9a15d;
+    margin-right: 1vw;
+    font-weight: bold;
+}
+
+.pagina-atual a{
+    color: #9f9f9f !important;
+}

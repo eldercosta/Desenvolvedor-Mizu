@@ -1,0 +1,39 @@
+#aviso{
+    padding: 4px;
+	border-radius: 4px;
+	margin: 10px auto;
+    font-size: 0.8rem;
+	color: #FFF;
+    width: 80%;
+    position: fixed;
+    top:6%;
+    right:3%;
+    opacity:0.9;
+    box-shadow: 3px 3px 1em #888;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    z-index: 2000;
+}
+    @media (min-width:375px){
+        #aviso{
+            max-width: 325px;
+        }
+    }
+
+.aviso-sacola{
+    border: 1px solid #951991 !important;
+    background-color: #9e519c !important;
+}
+
+.aviso-desejo{
+    border: 1px solid #d9a15d !important;
+    background-color: #d6af80 !important;
+}
+
+#aviso p{
+    display: inline-block;
+}
+
+#aviso i{
+    float: right;
+}

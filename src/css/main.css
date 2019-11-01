@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:700|Nanum+Gothic|Playfair+Display&display=swap');
+@import url('header.css');
+@import url('historico.css');
+@import url('produto-secao.css');
+@import url('prateleira.css');
+@import url('icons.css');
+@import url('zoom.css');
+@import url('rodape.css');
+@import url('aviso.css');
+
+html {
+    font-size: 0.8rem;
+  }
+  
+  @media (min-width:375px){
+    html {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (min-width:768px){
+    html {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    html {
+      font-size: 1rem;
+    }
+  }
+
+img{
+    width: 100%;
+    max-width: 100%;
+}
+
